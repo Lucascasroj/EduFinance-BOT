@@ -1,0 +1,57 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'Se ha logeado como {bot.user}')
+
+@bot.command()
+async def hola(ctx):
+    await ctx.send(f'Hola! soy {bot.user}, pertenezco al grupo Contro Il Tempo! Yo te ayudaré a entender algunos conceptos claves para que tengas una mejor gestión financiera a tu edad. (Pon /ayuda para conocer todos los comandos :D)')
+
+@bot.command()
+async def ayuda (ctx):
+    await ctx.send(f'Aquí estan todos los comandos: \n - $ahorro \n - $consumismo \n - $finanzas \n - $redesociales \n - $datocurioso1 \n - $datocurioso2 \n - $consejo1 \n - $consejo2 \n - $tiktok')
+
+@bot.command()
+async def ahorro (ctx):
+    await ctx.send(f'Uno de los conceptos claves de este tema es el ahorro, este es una parte de los ingresos que no se destina al consumo. En otras palabras, es la parte del dinero que no es gastado y que se puede guardar para otros fines. Es una práctica que realizan personas, empresas, organizaciones y estados, el objetivo es tener dinero separado para en el futuro adquirir determinados productos, realizar inversiones o tener una reserva en casos de emergencia 💵💵💵')
+
+@bot.command()
+async def consumismo (ctx):
+    await ctx.send(f'El consumismo en los adolescentes puede ser manifestado por la búsqueda de identidad, la presión social y la compensación emocional, influenciados por la publicidad y las redes sociales. También es reflejado en el deseo de adquirir bienes y servicios para encajar socialmente, expresar su individualidad y como una forma de manejar emociones como la ansiedad o el estrés')
+
+@bot.command()
+async def finanzas (ctx):
+    await ctx.send(f'Las finanzas son el estudio de la gestión del dinero y la moneda. Saber administrar nuestro dinero no solo significa ahorrar, sino también aprender a tomar decisiones responsables para construir un futuro estable. Las finanzas personales son importantes porque nos ayudan a evitar deudas, a cumplir metas y a tener tranquilidad económica, tanto en nuestras familias como en nosotros mismos 📚')
+
+@bot.command()
+async def redesociales (ctx):
+    await ctx.send(f'Las redes sociales influyeron mucho en el consumo ya que se transformó en una actividad común en todo el mundo, siendo un nuevo método para conocer nuevas marcas y productos. Influenciando en las decisiones financieras de los adolescentes, gracias a los "influencers" las empresas tienen mayores oportunidades de impulsar sus ventas, sobre todo productos 🌐')
+
+@bot.command()
+async def datocurioso1 (ctx):
+    await ctx.send(f'¿Sabías que… a nivel mundial, el 79 % de los adultos tienen una cuenta bancaria, pero solo el 40 % ha ahorrado en el último año 😱? Esto se debe a muchos factores distintos como la falta de ingresos suficientes, la baja educación financiera, la desconfianza en el sistema, etc.')
+                   
+@bot.command()
+async def datocurioso2 (ctx):
+    await ctx.send(f'Otro dato curioso es que solo alrededor del 8% del dinero global existe en forma de billetes y monedas físicos. El 92% restante es dinero digital en bases de datos. Además de que se han impreso más billetes de Monopoly que de dólar.')
+                   
+@bot.command()
+async def consejo1 (ctx):
+    await ctx.send(f'¡Un consejo que te puedo dar es una estrategia para ahorrar! Hay muchas… pero una de ellas es la regla 50/30/20 significa: el 50% lo destinas a tus gastos básicos como agua, luz, electricidad, etc. El 30% es para tus gastos personales como ropa, accesorios, dulces, etc. Y por último el 20% es para tus ahorros, con eso si tienes una emergencia puedes usar ese dinero para lo que necesites 🏦')
+                   
+@bot.command()
+async def consejo2 (ctx):
+    await ctx.send(f'Otro consejo! No gastes por emociones. Antes de comprar, pregúntate si es necesario y si puedes permitirtelo, de lo contrario, podrías generar estrés financiero adicional.')
+
+@bot.command()
+async def tiktok (ctx):
+    await ctx.send(f'¡Puedes seguir a la cuenta de Contro Il Tempo en TikTok! Allí podrás encontrar muchas publicaciones con más información sobre el tema de finanzas. Los puedes encontrar cómo: contro.il.tempo')
+
+bot.run("")
