@@ -12,7 +12,7 @@ async def on_ready():
 
 @bot.command()
 async def hola(ctx):
-    await ctx.send(f'Hola! soy {bot.user}, pertenezco al grupo Contro Il Tempo! Yo te ayudaré a entender algunos conceptos claves para que tengas una mejor gestión financiera a tu edad. (Pon /ayuda para conocer todos los comandos :D)')
+    await ctx.send(f'Hola! soy {bot.user}, pertenezco al grupo Contro Il Tempo! Yo te ayudaré a entender algunos conceptos claves para que tengas una mejor gestión financiera a tu edad. (Pon $ayuda para conocer todos los comandos :D)')
 
 @bot.command()
 async def ayuda (ctx):
