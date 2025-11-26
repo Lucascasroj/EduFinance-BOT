@@ -16,7 +16,7 @@ async def hola(ctx):
 
 @bot.command()
 async def ayuda (ctx):
-    await ctx.send(f'Aquí estan todos los comandos: \n - $ahorro \n - $consumismo \n - $finanzas \n - $redesociales \n - $datocurioso1 \n - $datocurioso2 \n - $consejo1 \n - $consejo2 \n - $tiktok')
+    await ctx.send(f'Aquí estan todos los comandos: \n - $ahorro \n - $consumismo \n - $finanzas \n - $redesociales \n - $datocurioso1 \n - $datocurioso2 \n - $consejo1 \n - $consejo2')
 
 @bot.command()
 async def ahorro (ctx):
@@ -49,9 +49,5 @@ async def consejo1 (ctx):
 @bot.command()
 async def consejo2 (ctx):
     await ctx.send(f'Otro consejo! No gastes por emociones. Antes de comprar, pregúntate si es necesario y si puedes permitirtelo, de lo contrario, podrías generar estrés financiero adicional.')
-
-@bot.command()
-async def tiktok (ctx):
-    await ctx.send(f'¡Puedes seguir a la cuenta de Contro Il Tempo en TikTok! Allí podrás encontrar muchas publicaciones con más información sobre el tema de finanzas. Los puedes encontrar cómo: contro.il.tempo')
 
 bot.run("")
